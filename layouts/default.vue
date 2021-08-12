@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<Header/>
+		<Header class='layout__header'/>
 		<Nuxt/>
 	</main>
 </template>
@@ -16,6 +16,12 @@ export default {
 
 </script>
 
-<style>
-
+<style lang='scss'>
+.layout {
+  &__header {
+    .header__left {
+      font-size: 25px;
+    }
+  }
+}
 </style>
