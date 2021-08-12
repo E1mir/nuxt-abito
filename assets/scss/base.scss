@@ -1,0 +1,11 @@
+@import "variables";
+
+* {
+  font-variant-ligatures: no-common-ligatures;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased;
+}
