@@ -1,0 +1,28 @@
+@import "variables";
+
+.gray {
+  color: $color-text-secondary;
+}
+
+.trg {
+  color: $color-primary;
+}
+
+
+@for $i from 1 through 10 {
+  .mb#{$i*5} {
+    margin-bottom: #{$i * 5}px;
+  }
+}
+
+@for $i from 2 through 10 {
+  .fw#{$i} {
+    font-weight: $i * 100;
+  }
+}
+
+@for $i from 5 through 20 {
+  .t#{$i*2} {
+    font-size: #{$i*2}px;
+  }
+}
