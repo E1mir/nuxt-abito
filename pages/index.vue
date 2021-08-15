@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div>Привет мир</div>
-    <button @click='fetchSomething'>Load</button>
-
 
     <Product title='Самокат'/>
   </div>

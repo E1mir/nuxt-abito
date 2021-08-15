@@ -1,17 +1,20 @@
 <template>
-	<header class="header">
+	<header class="header container">
 		<div class='header__left'>
       <NuxtLink class='brand' to='/'>
         <img src='/img/logo.svg' alt='Abito'>
       </NuxtLink>
       <nav>
-        <ul>
-          <li></li>
+        <ul class="nav t14">
+          <li><a href="#">Авто</a></li>
+					<li><a href="#">Недвижимость</a></li>
+					<li><a href="#">Работа</a></li>
+					<li><a href="#">Услуги</a></li>
         </ul>
       </nav>
     </div>
     <div class='header__right'>
-      <div>
+      <div class="registr">
         Вход и регистрация
       </div>
       <AppButton
@@ -22,15 +25,6 @@
       >
         Подать объявление
       </AppButton>
-      <div v-else>
-        Скрыто
-      </div>
-      <br>
-      <br>
-      <AppButton @click='toggleButton'> Toggle button </AppButton>
-      <br>
-      <br>
-      <AppButton @click='toggleButtonShow'> Toggle hide</AppButton>
     </div>
 	</header>
 </template>
@@ -55,17 +49,50 @@ export default {
 	  onPostAnAd () {
 	    console.log('Open ad page')
     },
-    toggleButton () {
-	    this.buttonDisabled = !this.buttonDisabled
-    },
-    toggleButtonShow () {
-	    this.show = !this.show
-    }
   }
 }
 </script>
 
-<style lang="sass" scoped>
-	.header
-		font-size: 12px
+<style lang="scss" scoped>
+	@import "assets/scss/variables";
+	.header{
+		color: $color-text;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 30px 0;
+		
+		&__left, &__right{
+			display: flex;
+			align-items: center;
+		}
+			
+	}
+		
+	.registr{
+		margin-right: 25px;
+	}
+		
+	.nav{
+		display: flex;
+		align-items: center;
+		li{
+			margin-right: 14px;
+			display: inline-block;
+		}
+		a{
+			text-decoration: none;
+			color: $color-text;
+			transition: all 0.4s;
+			&:hover{
+				color: $color-primary;
+			}
+		}
+	}
+		
+	.brand{
+		margin-right: 20px;
+		width: 58px;
+	}
+		
 </style>

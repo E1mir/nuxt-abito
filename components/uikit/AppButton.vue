@@ -4,11 +4,12 @@
     :class='{
     "app-button--default": buttonType === "default",
     "app-button--white": buttonType === "white",
-    "app-button--text": buttonType === "text"
+    "app-button--img": buttonImg === true
   }'
   :disabled='disabled'
   @click='onClick'
   >
+		<img v-if="buttonImg === true" :src="imgSrc" alt="">
     <slot/>
   </button>
 </template>
@@ -23,12 +24,17 @@ export default {
       type: String,
       default: 'default'
     },
+		buttonImg: {
+      type: String,
+    },
+		imgSrc: {
+      type: String,
+    },
     disabled: {
       type: Boolean,
       default: false
     }
   },
-
 
   methods: {
     onClick () {
@@ -72,7 +78,14 @@ export default {
       color: white;
     }
   }
-
+	&--img{
+		font-size: 16px;
+		img{
+			flex-shrink: 0;
+			margin-right: 6px;
+			width: 15px;
+		}
+	}
   &[disabled] {
     cursor: not-allowed;
     background-color: #c4c4c4;
