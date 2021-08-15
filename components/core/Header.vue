@@ -14,7 +14,7 @@
       </nav>
     </div>
     <div class='header__right'>
-      <div class="registr">
+      <div class="registration">
         Вход и регистрация
       </div>
       <AppButton
@@ -61,18 +61,18 @@ export default {
 		align-items: center;
 		justify-content: space-between;
 		padding: 30px 0;
-		
+
 		&__left, &__right{
 			display: flex;
 			align-items: center;
 		}
-			
+
 	}
-		
-	.registr{
+
+	.registration{
 		margin-right: 25px;
 	}
-		
+
 	.nav{
 		display: flex;
 		align-items: center;
@@ -89,10 +89,10 @@ export default {
 			}
 		}
 	}
-		
+
 	.brand{
 		margin-right: 20px;
 		width: 58px;
 	}
-		
+
 </style>
